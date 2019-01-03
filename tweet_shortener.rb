@@ -1,6 +1,6 @@
 # Write your code here.
 def dictionary
-  $substitute_list = {
+  {
     "hello" => "hi",
     "to"=> "2",
     "two"=> "2",
@@ -15,10 +15,9 @@ def dictionary
 end
 
 def word_substituter(string)
-  dictionary
   result = string.split(" ").map do |word|
-    if $substitute_list.keys.include?(word.downcase)
-      $substitute_list[word.downcase]
+    if dictionary.keys.include?(word.downcase)
+      dictionary[word.downcase]
     else
       word
     end
